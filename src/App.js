@@ -12,6 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 import './App.css';
 
 
+// In this app, we're using only class components, no functional components
 class App extends Component {
   // Below is app-level state bc it's shared between components
   state = {
@@ -92,7 +93,7 @@ class App extends Component {
       <Router>
         <div className="App">           {/* Styling defined in App.css */}
           <div className="container">
-            <Header />
+            <Header /> 
             <Route exact path="/" render={props => (      // This URL will go display AddTodo and Todos components. Use render so we can pass props thru components
               <React.Fragment>
                 <AddTodo addTodo1={this.addTodo}/>
